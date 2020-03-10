@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Menus/SaveGameMenu/SaveGameSlot.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/8_pixelart.tres" type="DynamicFont" id=2]
+
+[node name="SaveGameSlot" type="MarginContainer"]
+margin_right = 256.0
+margin_bottom = 256.0
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 320.0
+margin_bottom = 252.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="Labels" type="VBoxContainer" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 320.0
+margin_bottom = 252.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatusLabel" type="Label" parent="Labels"]
+margin_right = 316.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = " No Data detected."
+align = 1
+valign = 1
+
+[node name="TotalPlaytimeLabel" type="Label" parent="Labels"]
+margin_top = 84.0
+margin_right = 316.0
+margin_bottom = 164.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "00h 00min 00sec"
+align = 1
+valign = 1
+
+[node name="CurrentPositionLabel" type="Label" parent="Labels"]
+margin_top = 168.0
+margin_right = 316.0
+margin_bottom = 248.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "No Position in the world yet."
+align = 1
+valign = 1

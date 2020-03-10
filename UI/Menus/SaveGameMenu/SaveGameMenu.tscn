@@ -1,0 +1,122 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Menus/SaveGameMenu/SaveGameSlot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/Menus/SaveGameMenu/SaveGameMenu.gd" type="Script" id=2]
+
+[node name="SaveGameMenu" type="MarginContainer"]
+margin_right = 640.0
+margin_bottom = 360.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+split_offset = 500
+
+[node name="Columns" type="VBoxContainer" parent="VSplitContainer"]
+margin_right = 640.0
+margin_bottom = 336.0
+
+[node name="Row1" type="HBoxContainer" parent="VSplitContainer/Columns"]
+margin_right = 640.0
+margin_bottom = 166.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/Columns/Row1"]
+margin_right = 210.0
+margin_bottom = 166.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SaveGame1" parent="VSplitContainer/Columns/Row1/MarginContainer" instance=ExtResource( 1 )]
+margin_right = 210.0
+margin_bottom = 166.0
+SlotNumber = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VSplitContainer/Columns/Row1"]
+margin_left = 214.0
+margin_right = 424.0
+margin_bottom = 166.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SaveGame2" parent="VSplitContainer/Columns/Row1/MarginContainer2" instance=ExtResource( 1 )]
+margin_right = 210.0
+margin_bottom = 166.0
+SlotNumber = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="VSplitContainer/Columns/Row1"]
+margin_left = 428.0
+margin_right = 640.0
+margin_bottom = 166.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SaveGame3" parent="VSplitContainer/Columns/Row1/MarginContainer3" instance=ExtResource( 1 )]
+margin_right = 212.0
+margin_bottom = 166.0
+SlotNumber = 3
+
+[node name="Row2" type="HBoxContainer" parent="VSplitContainer/Columns"]
+margin_top = 170.0
+margin_right = 640.0
+margin_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VSplitContainer/Columns/Row2"]
+margin_right = 210.0
+margin_bottom = 166.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SaveGame4" parent="VSplitContainer/Columns/Row2/MarginContainer" instance=ExtResource( 1 )]
+margin_right = 210.0
+margin_bottom = 166.0
+SlotNumber = 4
+
+[node name="MarginContainer2" type="MarginContainer" parent="VSplitContainer/Columns/Row2"]
+margin_left = 214.0
+margin_right = 424.0
+margin_bottom = 166.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SaveGame5" parent="VSplitContainer/Columns/Row2/MarginContainer2" instance=ExtResource( 1 )]
+margin_right = 210.0
+margin_bottom = 166.0
+SlotNumber = 5
+
+[node name="MarginContainer3" type="MarginContainer" parent="VSplitContainer/Columns/Row2"]
+margin_left = 428.0
+margin_right = 640.0
+margin_bottom = 166.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SaveGame6" parent="VSplitContainer/Columns/Row2/MarginContainer3" instance=ExtResource( 1 )]
+margin_right = 212.0
+margin_bottom = 166.0
+SlotNumber = 6
+
+[node name="Toolbar" type="MarginContainer" parent="VSplitContainer"]
+margin_top = 348.0
+margin_right = 640.0
+margin_bottom = 360.0
+custom_constants/margin_right = 16
+custom_constants/margin_top = 4
+custom_constants/margin_left = 16
+custom_constants/margin_bottom = 8
+
+[node name="ColorRect" type="ColorRect" parent="VSplitContainer/Toolbar"]
+margin_left = 16.0
+margin_top = 4.0
+margin_right = 624.0
+margin_bottom = 4.0
+color = Color( 0, 0, 0, 0.235294 )

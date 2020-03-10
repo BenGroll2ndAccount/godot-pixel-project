@@ -1,0 +1,196 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://Players/Player.png" type="Texture" id=1]
+[ext_resource path="res://Engine/Modules/Player/PlayerMovementController.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=2]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=3]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 6, 7 ]
+}
+
+[sub_resource type="Animation" id=4]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 5 ]
+}
+
+[sub_resource type="Animation" id=5]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 3 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "walk_down"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "walk_left"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "walk_right"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "walk_up"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=22]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachine" id=31]
+states/idle/node = SubResource( 6 )
+states/idle/position = Vector2( 772.333, 183 )
+states/walk_down/node = SubResource( 7 )
+states/walk_down/position = Vector2( 166.193, 581.124 )
+states/walk_left/node = SubResource( 8 )
+states/walk_left/position = Vector2( 167.642, 37.6666 )
+states/walk_right/node = SubResource( 9 )
+states/walk_right/position = Vector2( 1392.33, 39.2716 )
+states/walk_up/node = SubResource( 10 )
+states/walk_up/position = Vector2( 1391.69, 581.889 )
+transitions = [ "walk_down", "walk_left", SubResource( 11 ), "walk_left", "walk_right", SubResource( 12 ), "walk_right", "walk_up", SubResource( 13 ), "walk_up", "walk_down", SubResource( 14 ), "walk_left", "walk_down", SubResource( 15 ), "walk_down", "walk_up", SubResource( 16 ), "walk_up", "walk_right", SubResource( 17 ), "walk_right", "walk_left", SubResource( 18 ), "walk_down", "walk_right", SubResource( 19 ), "walk_right", "walk_down", SubResource( 20 ), "walk_left", "walk_up", SubResource( 21 ), "walk_up", "walk_left", SubResource( 22 ), "walk_left", "idle", SubResource( 23 ), "walk_down", "idle", SubResource( 24 ), "walk_right", "idle", SubResource( 25 ), "walk_up", "idle", SubResource( 26 ), "idle", "walk_left", SubResource( 27 ), "idle", "walk_down", SubResource( 28 ), "idle", "walk_up", SubResource( 29 ), "idle", "walk_right", SubResource( 30 ) ]
+start_node = "idle"
+graph_offset = Vector2( -258.852, 0 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=32]
+
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 7.75939, 7.98624 )
+
+[node name="Player" type="KinematicBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+pause_mode = 2
+current = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -8 )
+vframes = 2
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_process_mode = 0
+playback_default_blend_time = 1875.28
+playback_speed = 0.0
+anims/idle = SubResource( 1 )
+anims/walk_down = SubResource( 2 )
+anims/walk_left = SubResource( 3 )
+anims/walk_right = SubResource( 4 )
+anims/walk_up = SubResource( 5 )
+
+[node name="Statemachine" type="AnimationTree" parent="."]
+tree_root = SubResource( 31 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+process_mode = 0
+parameters/playback = SubResource( 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -8 )
+shape = SubResource( 33 )
+
+[node name="PlayerMovementController" parent="." instance=ExtResource( 2 )]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/Inventory/SelectionSlot.gd" type="Script" id=1]
+
+[node name="SelectionSlot" type="MarginContainer"]
+margin_right = 50.0
+margin_bottom = 50.0
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectionBackground" type="ColorRect" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 46.0
+margin_bottom = 46.0
+color = Color( 0, 0, 0, 0.109804 )
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 46.0
+margin_bottom = 46.0
+expand = true
+stretch_mode = 5

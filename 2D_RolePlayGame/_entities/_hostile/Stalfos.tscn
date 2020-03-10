@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://_entities/_hostile/Stalfos.gd" type="Script" id=1]
+[ext_resource path="res://_entities/_hostile/Stalfos.png" type="Texture" id=2]
+[ext_resource path="res://_engine/_modules/HealthController.tscn" type="PackedScene" id=3]
+[ext_resource path="res://_engine/_modules/HitRegister.tscn" type="PackedScene" id=4]
+[ext_resource path="res://_engine/_modules/KnockbackController.tscn" type="PackedScene" id=5]
+[ext_resource path="res://_engine/_modules/RandomMovementController.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7, 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7, 8 )
+
+[node name="Stalfos" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="StalfosSprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="HealthController" parent="." instance=ExtResource( 3 )]
+maxHP = 20
+
+[node name="HitRegister" parent="." instance=ExtResource( 4 )]
+
+[node name="HurtBox" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource( 2 )
+
+[node name="KnockbackController" parent="." instance=ExtResource( 5 )]
+weight = 30.0
+
+[node name="RandomMovementController" parent="." instance=ExtResource( 6 )]
+speed = 62
+moveframes = 12

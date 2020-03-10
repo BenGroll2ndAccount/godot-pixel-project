@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ParticleSystems/ManaPotionFillEffect.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.564626, 0.863946 )
+colors = PoolColorArray( 0.143433, 0.283279, 0.367188, 1, 0.431671, 0.843738, 0.898438, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 1
+emission_sphere_radius = 2.0
+flag_align_y = true
+flag_rotate_y = true
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+angular_velocity = 77.42
+angular_velocity_random = 0.25
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+tangential_accel = 19.35
+angle = 232.3
+scale_random = 1.0
+color_ramp = SubResource( 2 )
+
+[node name="ManaPotionFillEffect" type="Particles2D"]
+amount = 20
+lifetime = 0.7
+process_material = SubResource( 3 )
+script = ExtResource( 1 )
