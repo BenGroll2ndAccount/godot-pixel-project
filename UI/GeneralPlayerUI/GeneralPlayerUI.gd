@@ -142,6 +142,7 @@ func _open_dialogue(id):
 	get_tree().paused = true
 	var dialogueBox = preload("res://UI/DialogueBox/DialogueBox.tscn")
 	get_tree().get_root().add_child(dialogueBox)
+	dialogueBox.start(id)
 	
 	
 	
