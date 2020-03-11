@@ -137,3 +137,15 @@ func _remove_mana(amount):
 func heal(amount):
 	#TODO
 	pass
+	
+func _open_dialogue(id):
+	get_tree().paused = true
+	var dialogueBox = preload("res://UI/DialogueBox/DialogueBox.tscn")
+	get_tree().get_root().add_child(dialogueBox)
+	
+	
+	
+	
+	
+	
+	

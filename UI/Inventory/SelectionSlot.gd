@@ -38,7 +38,7 @@ func hover():
 	if item_name != "":
 		INV.get_node("InventoryContainer/VSplitContainer/TooltipContainer/TooltipBackground/ItemName").text = Items.get_realName(item_name)
 		INV.get_node("InventoryContainer/VSplitContainer/TooltipContainer/TooltipBackground/Tooltip").text = Items.get_tooltip(item_name)
-		INV.get_node("InventoryContainer/VSplitContainer/TooltipContainer/TooltipBackground/ItemName").set("custom_colors/font_color", INV.get_node("InventoryContainer/VSplitContainer/TooltipContainer/TooltipBackground/ItemName").colors[Items.get_nameColor(item_name)])
+		INV.get_node("InventoryContainer/VSplitContainer/TooltipContainer/TooltipBackground/ItemName").set("custom_colors/font_color", PredefinedColors.colors[Items.get_nameColor(item_name)])
 	else:
 		INV.get_node("InventoryContainer/VSplitContainer/TooltipContainer/TooltipBackground/ItemName").text = ""
 		INV.get_node("InventoryContainer/VSplitContainer/TooltipContainer/TooltipBackground/Tooltip").text = ""

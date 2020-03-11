@@ -3,7 +3,7 @@ var inventory_access = false
 var inventory_open = false
 var pausemenu_open = false
 var general_ui_enabled = false
-
+var dialogue_open = false
 
 func _process(delta):
 	if general_ui_enabled == true:
@@ -12,12 +12,12 @@ func _process(delta):
 		GeneralPlayerUI.hide()
 	
 	if Input.is_action_just_pressed("ui_cancel"):
-		if not inventory_open && not pausemenu_open:
+		if not inventory_open && not pausemenu_open && not dialogue_open:
 			pausemenu_open = true
 			var pausemenu = preload("res://UI/Menus/PauseGameMenu/PauseGameMenu.tscn").instance()
 			add_child(pausemenu)
 			get_tree().paused = true
-	if Input.is_action_just_pressed("ui_focus_next"):
+	if Input.is_action_just_pressed("ui_focus_next") && not pausemenu_open && not dialogue_open:
 		if inventory_access:
 			if not inventory_open:
 				general_ui_enabled = false

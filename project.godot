@@ -27,6 +27,8 @@ DebugConsole="*res://Engine/DEBUG/DebugConsole.tscn"
 SaveLoadVariables="*res://Engine/SaveLoadVariables.gd"
 SystemTimeManagement="*res://Engine/SystemTimeManagement.gd"
 GeneralPlayerUI="*res://UI/GeneralPlayerUI/GeneralPlayerUI.tscn"
+PredefinedColors="*res://Engine/PredefinedColors.gd"
+Conversations="*res://Engine/Conversations.gd"
 
 [display]
 

@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/16_pixelart.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/UI Assets/DialogueBox.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Label
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath("DialogueBoxBackground:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 8.57418, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 170 ), Vector2( 0, 0 ) ]
+}
+
+[node name="DialogueBox" type="CanvasLayer"]
+layer = 70
+
+[node name="DialogueBoxBackground" type="Sprite" parent="."]
+position = Vector2( 320, 180 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="AuthorName" type="Label" parent="DialogueBoxBackground"]
+pause_mode = 2
+margin_left = -284.0
+margin_top = 26.7619
+margin_right = 285.0
+margin_bottom = 40.7619
+custom_fonts/font = ExtResource( 1 )
+text = "Test Character Name"
+align = 1
+valign = 1
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBoxBackground"]
+margin_left = -286.0
+margin_top = 47.0
+margin_right = 285.0
+margin_bottom = 149.0
+custom_fonts/normal_font = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade_in = SubResource( 2 )
