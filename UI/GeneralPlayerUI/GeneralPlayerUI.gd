@@ -27,7 +27,7 @@ func show():
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_up"):
-		Items.collect_item("poisonbottle")
+		_open_dialogue("1")
 	
 	if Items.inventory_space[18] != "":
 		$SlotLeftBackground/ItemIcon.texture = Items.get_icon(str(Items.inventory_space[18]))
@@ -140,9 +140,8 @@ func heal(amount):
 	
 func _open_dialogue(id):
 	get_tree().paused = true
-	var dialogueBox = preload("res://UI/DialogueBox/DialogueBox.tscn")
+	var dialogueBox = preload("res://UI/DialogueBox/DialogueBox.tscn").instance()
 	get_tree().get_root().add_child(dialogueBox)
-	dialogueBox.start(id)
 	
 	
 	
