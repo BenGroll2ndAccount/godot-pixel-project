@@ -141,7 +141,8 @@ func heal(amount):
 func _open_dialogue(id):
 	get_tree().paused = true
 	var dialogueBox = preload("res://UI/DialogueBox/DialogueBox.tscn").instance()
-	get_tree().get_root().add_child(dialogueBox)
+	add_child(dialogueBox)
+	dialogueBox.start(id)
 	
 	
 	
