@@ -9,8 +9,10 @@ script = ExtResource( 1 )
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 640.0
 margin_bottom = 360.0
+color = Color( 0.4, 0.105882, 0.105882, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LoadGameTavern" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 1 )
