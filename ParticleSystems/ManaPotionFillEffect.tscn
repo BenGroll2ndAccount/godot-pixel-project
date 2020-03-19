@@ -30,5 +30,6 @@ color_ramp = SubResource( 2 )
 [node name="ManaPotionFillEffect" type="Particles2D"]
 amount = 20
 lifetime = 0.7
+local_coords = false
 process_material = SubResource( 3 )
 script = ExtResource( 1 )
