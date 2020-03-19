@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Areas/Testing/TestArea.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tiles/Outside/GrassBaseTileset.png" type="Texture" id=2]
 [ext_resource path="res://Enviroment/Foliage/Bush.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enviroment/Foliage/Tree.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Engine/Shaders/BlurLayer.shader" type="Shader" id=5]
 
 [sub_resource type="TileSet" id=1]
 0/name = "GrassBaseTileset.png 0"
@@ -110,10 +109,6 @@
 5/shapes = [  ]
 5/z_index = 0
 
-[sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 5 )
-shader_param/blur_intensity = 0.048
-
 [node name="TestArea" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -132,13 +127,3 @@ position = Vector2( 204, 39 )
 
 [node name="StaticBody2D" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 284, 50 )
-
-[node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource( 2 )
-margin_left = 150.0
-margin_top = -43.0
-margin_right = 254.0
-margin_bottom = 80.0
-__meta__ = {
-"_edit_use_anchors_": false
-}

@@ -167,17 +167,16 @@ mouse_filter = 2
 
 [node name="SpriteQuit" type="Sprite" parent="CenterContainer/VBoxContainer"]
 modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
-position = Vector2( 1.3, 38.177 )
+position = Vector2( -8.28252, 37.9927 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
-flip_h = true
 hframes = 2
 
 [node name="ButtonQuit" type="Button" parent="CenterContainer/VBoxContainer/SpriteQuit"]
-margin_left = -39.1965
-margin_top = -17.0963
-margin_right = 26.8035
-margin_bottom = 12.9037
+margin_left = -28.324
+margin_top = -17.3727
+margin_right = 37.676
+margin_bottom = 12.6273
 custom_fonts/font = ExtResource( 5 )
 text = "Quit"
 flat = true
@@ -192,16 +191,17 @@ anims/get_big = SubResource( 2 )
 
 [node name="SpriteClose" type="Sprite" parent="CenterContainer/VBoxContainer"]
 modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
-position = Vector2( 1.62355, -28.794 )
+position = Vector2( 5.49342, -28.794 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
+flip_h = true
 hframes = 2
 
 [node name="ButtonClose" type="Button" parent="CenterContainer/VBoxContainer/SpriteClose"]
-margin_left = -25.8035
-margin_top = -18.3556
-margin_right = 37.1965
-margin_bottom = 12.6444
+margin_left = -33.6354
+margin_top = -19.3691
+margin_right = 29.3646
+margin_bottom = 11.6309
 custom_fonts/font = ExtResource( 5 )
 text = "Close"
 flat = true

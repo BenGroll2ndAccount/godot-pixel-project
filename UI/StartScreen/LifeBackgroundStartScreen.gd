@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node2D
 
 onready var ColorRec = get_node("ColorRect")
 var factor_r
@@ -14,8 +14,5 @@ func _process(delta):
 		ColorRec.color.r8 = (( (83999 - SystemTimeManagement.time_in_ticks) / 432)) * 1.3
 		ColorRec.color.g8 = (pow(((83999 - SystemTimeManagement.time_in_ticks) / 21600), 2)) / 2.1 * 100 * 1.3
 		ColorRec.color.b8 = 2 * ((83999 - SystemTimeManagement.time_in_ticks) / 432) * 1.3
-
-
-
 
 
