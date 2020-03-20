@@ -12,8 +12,10 @@ onready var SelRight = INV.get_node("InventoryContainer/VSplitContainer/HSplitCo
 func _process(delta):
 	if item_name != "":
 		$CenterContainer/Sprite.texture = Items.get_icon(item_name)
+		$CenterContainer/Sprite.normal_map = Items.get_normal(item_name)
 	else:
 		$CenterContainer/Sprite.texture = null
+		$CenterContainer/Sprite.normal_map = null
 	if Input.is_action_just_pressed("Left_Mouse"):	
 		if hovered:
 			Carrier.toggle(self)

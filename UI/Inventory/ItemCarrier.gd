@@ -34,6 +34,7 @@ func activate(orig, item):
 		self.show()
 		origin_slot.clear()
 		$TextureRect.texture = Items.get_icon(item)
+		$TextureRect.normal_map = Items.get_normal(item)
 		following = true
 	
 func drop(slot):

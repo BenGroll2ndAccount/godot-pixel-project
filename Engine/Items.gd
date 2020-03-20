@@ -34,6 +34,7 @@ var inventory_space = [
 		#id = 1,
 		#itemRealname = "Test Item",
 		#icon = preload("res://Assets/ItemIcons/TestItems/Healpot.png"),
+		#normal = preload("res://")
 		#tooltip = "Potion commonly used for testing.",
 		#equippable = true,
 		#script = "res://Items/Scripts/testitem.gd",
@@ -49,6 +50,7 @@ var items = {
 		id = 1,
 		itemRealname = "Potion of Restoration",
 		icon = preload("res://Assets/ItemIcons/Consumables/Healpot.png"),
+		normal = preload("res://Assets/ItemIcons/Consumables/Healpot_nrm.png"),
 		tooltip = "Potion that restores ... of your health when used. \nTastes like freshly picked mint.",
 		equippable = true,
 		script = "res://Items/Scripts/Consumables/healpotion.gd",
@@ -59,6 +61,7 @@ var items = {
 		id = 2,
 		itemRealname = "Potion of Magic",
 		icon = preload("res://Assets/ItemIcons/Consumables/ManaPotion.png"),
+		normal = preload("res://Assets/ItemIcons/Consumables/ManaPotion_nrm.png"),
 		tooltip = "One sip on this potion fills up 2 mana. \nKinda feels slimy in your throat and is very chilly.",
 		equippable = true,
 		script = "res://Items/Scripts/Consumables/manapotion.gd",
@@ -69,6 +72,7 @@ var items = {
 		id = 3,
 		itemRealname = "Potion of Poison",
 		icon = preload("res://Assets/ItemIcons/Consumables/Poison.png"),
+		normal = preload("res://Assets/ItemIcons/Consumables/Poison_nrm.png"),
 		tooltip = "Yummy yummy",
 		equippable = true,
 		script = "res://Items/Scripts/Consumables/poisonbottle.gd",
@@ -99,8 +103,17 @@ func get_scriptpath(item):
 	
 func get_nameColor(item):
 	return items[item].nameColor
+	
+func get_normal(item):
+	return items[item].normal
 
 #Utility Methods for working with the items
+func _process(delta):
+	if Input.is_action_just_pressed("TEST"):
+		collect_item("manapotion")
+
+
+
 func collect_item(item):
 	var loaded = false
 	for slot in inventory_space.size() - 1 :
@@ -113,6 +126,7 @@ func collect_item(item):
 
 func drop_item(item):
 	pass
+	### TO BE DONE
 	
 func equip_item(slot, item):
 	if item != "":

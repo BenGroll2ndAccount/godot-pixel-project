@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/Inventory/Inventory.gd" type="Script" id=1]
 [ext_resource path="res://UI/Inventory/InventorySlot.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://UI/Inventory/SelectionSlot.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Fonts/16_pixelart.tres" type="DynamicFont" id=6]
 [ext_resource path="res://pixelart.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://UI/Inventory/ItemName.gd" type="Script" id=8]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 4 )
@@ -348,7 +347,6 @@ custom_colors/font_color = Color( 0.643137, 0.92549, 0.501961, 1 )
 custom_colors/font_outline_modulate = Color( 0.619608, 0.168627, 0.168627, 1 )
 align = 1
 valign = 1
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -356,11 +354,4 @@ __meta__ = {
 [node name="Carrier" type="Node2D" parent="."]
 script = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="Carrier"]
-margin_right = 40.0
-margin_bottom = 40.0
-mouse_filter = 2
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TextureRect" type="Sprite" parent="Carrier"]
